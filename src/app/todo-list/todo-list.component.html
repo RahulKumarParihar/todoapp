@@ -1,0 +1,9 @@
+<main class="container">
+  <input class="card" type="text" placeholder="What to do?" (keyup.enter)="onEnterPressed($event)">
+</main>
+
+<div *ngIf="data$ | async as todos">
+  <div *ngFor="let todo of todos" class="card--transparent">
+    {{ todo.description }}
+  </div>
+</div>
