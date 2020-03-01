@@ -23,16 +23,16 @@ export class TodoListComponent implements OnInit {
   }
 
   onEnterPressed(event) {
-      this.inputSting = event.target.value;
-      const inputObj = {
-        id: Math.random(),
-        description: this.inputSting,
-        isCompleted: true
-      };
+    this.inputSting = event.target.value;
+    const inputObj = {
+      id: Math.random(),
+      description: this.inputSting,
+      isCompleted: true
+    };
 
-      console.log(inputObj);
+    console.log(inputObj);
 
-      this.store.dispatch(new AddToDo(inputObj));
-      this.store.dispatch(new FetchData());
+    this.store.dispatch(new AddToDo(inputObj));
+    this.store.dispatch(new FetchData());
   }
 }
