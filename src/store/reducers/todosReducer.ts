@@ -1,32 +1,24 @@
-import { DISPLAY_RANDOM_NAME, FETCH_DATA_SUCCESS, ADD_STRING, TO_SO_SUCCESS } from "../actions";
-import { createSelector, createFeatureSelector } from '@ngrx/store';
+import { FETCH_DATA_SUCCESS, TO_SO_SUCCESS } from '../actions';
 
 export interface TodosState {
   name: string;
-  data: Array<object>,
-  singleData: object
+  data: Array<object>;
+  singleData: object;
 }
 
 const initialState: TodosState = {
   name: '',
   data: [],
-  singleData: {}
+  singleData: null
 };
 
 export function todosReducer(state = initialState, action): TodosState {
   switch (action.type) {
-    case DISPLAY_RANDOM_NAME: {
-      return {
-          ...state,
-          name: getRandomName(),
-      }
-    }
-    
     case FETCH_DATA_SUCCESS: {
       return {
         ...state,
         data: action.payload,
-      }
+      };
     }
 
     case TO_SO_SUCCESS: {
@@ -41,10 +33,3 @@ export function todosReducer(state = initialState, action): TodosState {
     }
   }
 }
-
-const getRandomName = () => {
-    const randomNames = ["ThoughtWorks Mumbai", "ThoughtWorks Gurgaon", "ThoughtWorks Pune", "ThoughtWorks Bangalore", "ThoughtWorks Hyderabad", "ThoughtWorks Chennai", "ThoughtWorks Coimbatore"];
-    const index = Math.floor(Math.random() * randomNames.length);
-    return randomNames[index];
-}
-

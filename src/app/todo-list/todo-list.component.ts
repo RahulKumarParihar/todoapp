@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { State } from 'src/store/reducers';
-import { DisplayRandomName, FetchData, AddToDo } from 'src/store/actions';
+import { FetchData, AddToDo } from 'src/store/actions';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -33,5 +33,6 @@ export class TodoListComponent implements OnInit {
       console.log(inputObj);
 
       this.store.dispatch(new AddToDo(inputObj));
+      this.store.dispatch(new FetchData());
   }
 }

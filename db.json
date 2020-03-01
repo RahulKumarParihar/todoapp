@@ -1,24 +1,13 @@
 {
   "todos": [
     {
-      "description": "NgRx is so cool."
-    },
-    {
-      "description": "Now, let's implement the full Todo App."
-    },
-    {
-      "id": 0.566499222575362,
-      "description": "dfsfsdf",
+      "id": 0.9455536128967648,
+      "description": "hello",
       "isCompleted": true
     },
     {
-      "id": 0.7529022665111211,
-      "description": "adfd",
-      "isCompleted": true
-    },
-    {
-      "id": 0.3073567467989491,
-      "description": "xyz",
+      "id": 0.3893923572097078,
+      "description": "alpha",
       "isCompleted": true
     }
   ]

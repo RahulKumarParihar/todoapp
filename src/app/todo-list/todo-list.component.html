@@ -7,3 +7,6 @@
     {{ todo.description }}
   </div>
 </div>
+<div *ngIf="singleData$ | async as singleToDo" class="card--transparent">
+    {{ singleToDo.description }}
+</div>
