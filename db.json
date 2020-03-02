@@ -1,14 +1,4 @@
 {
   "todos": [
-    {
-      "id": 0.9455536128967648,
-      "description": "hello",
-      "isCompleted": true
-    },
-    {
-      "id": 0.3893923572097078,
-      "description": "alpha",
-      "isCompleted": true
-    }
   ]
 }
